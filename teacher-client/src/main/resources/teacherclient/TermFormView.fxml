@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../styles/mainViewSytles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TermFormController">
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="340.0" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <center>
+                  <TableView fx:id="groupsTableView" BorderPane.alignment="CENTER">
+                    <columns>
+                      <TableColumn fx:id="groupName" editable="false" prefWidth="399.0" text="Wybierz grupę" />
+                    </columns>
+                  </TableView>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#ffffff00" height="52.0" layoutX="20.0" layoutY="171.0" stroke="#4d4d4d80" strokeType="INSIDE" width="153.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#ffffff00" height="52.0" layoutX="20.0" layoutY="245.0" stroke="#4d4d4d7f" strokeType="INSIDE" width="153.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" />
+            <TextField fx:id="termNameField" layoutX="26.0" layoutY="60.0" prefWidth="150.0" promptText="Nazwa" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" />
+            <DatePicker fx:id="termStartDateField" layoutX="26.0" layoutY="120.0" prefWidth="150.0" promptText="Wybierz datę" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" />
+            <Button id="add_button" fx:id="save" layoutX="33.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleSaveButtonAction" prefWidth="60.0" text="Zapisz" />
+            <Button id="cancel_button" fx:id="cancel" layoutX="100.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleCancelButtonAction" prefWidth="60.0" text="Anuluj" />
+            <Text layoutX="28.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwa" />
+            <Text layoutX="28.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="150.30859375" />
+            <Text layoutX="28.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Czas rozpoczęcia" />
+            <Text layoutX="28.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Czas zakończenia" />
+            <Spinner fx:id="termStartMinuteField" layoutX="103.0" layoutY="188.0" prefHeight="25.0" prefWidth="67.0" />
+            <Spinner fx:id="termEndMinuteField" layoutX="103.0" layoutY="264.0" prefHeight="25.0" prefWidth="67.0" />
+            <Spinner fx:id="termEndHourField" layoutX="33.0" layoutY="264.0" prefHeight="25.0" prefWidth="67.0" />
+            <Spinner fx:id="termStartHourField" layoutX="33.0" layoutY="188.0" prefHeight="25.0" prefWidth="67.0" />
+            <Text layoutX="33.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Godzina" />
+            <Text layoutX="33.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Godzina" />
+            <Text layoutX="103.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minuta" />
+            <Text layoutX="103.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minuta" />
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

@@ -1,0 +1,30 @@
+
+.tab {
+    -fx-background-color: #4c729e;
+    -fx-text-base-color: #ffffff;
+}
+.tab:hover{
+    -fx-background-color: #3a5b82;
+    -fx-text-base-color: #ffffff;
+}
+
+.tab:selected{
+    -fx-background-color: #2e4968;
+    -fx-text-base-color: #ffffff;
+}
+
+#add_button {
+    -fx-background-color: #28a745;
+    -fx-text-fill: white;
+}
+
+#add_button:hover {
+    -fx-background-color: #218838;
+}
+#cancel_button{
+    -fx-background-color: #dc3545;
+    -fx-text-base-color: #ffffff;
+}
+#cancel_button:hover{
+    -fx-background-color: #b32936;
+}
